@@ -2,6 +2,10 @@
 
 > A Vue.js project
 
+![Alt text](relative/path/to/img1.jpg?raw=true "signup")
+
+![Alt text](relative/path/to/img2.jpg?raw=true "login")
+
 ## Build Setup
 
 ``` bash
