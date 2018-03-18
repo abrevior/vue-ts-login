@@ -2,9 +2,9 @@
 
 > A Vue.js project
 
-![Alt text](/img1.jpg?raw=true "signup")
+![Alt text](/img1.png?raw=true "signup")
 
-![Alt text](/img2.jpg?raw=true "login")
+![Alt text](/img2.png?raw=true "login")
 
 ## Build Setup
 
