@@ -2,34 +2,18 @@
   <div id="login">
     <h1>Welcome Back!</h1>
     <form>
-      <div class="field-wrap">
-        <label :class="emailClass">
-          Email Address
-          <span class="req">*</span>
-        </label>
-        <input
-          type="email"
-          @focus="toggle('email')"
-          @blur="toggle('email')"
-          v-model="email"
-          required
-          autocomplete="off"
-        />
-      </div>
-      <div class="field-wrap">
-        <label :class="passwordClass">
-          Password
-          <span class="req">*</span>
-        </label>
-        <input
-          type="password"
-          @focus="toggle('password')"
-          @blur="toggle('password')"
-          v-model="password"
-          required
-          autocomplete="off"
-        />
-      </div>
+      <input-component
+        v-model="email"
+        :type="'email'"
+        :label="'Email Address'"
+        :isRequired="true"
+      />
+      <input-component
+        v-model="password"
+        :type="'password'"
+        :label="'Password'"
+        :isRequired="true"
+      />
       <p class="forgot">
         <a href="#">Forgot Password?</a>
       </p>

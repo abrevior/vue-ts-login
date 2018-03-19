@@ -1,75 +1,35 @@
 <template>
   <div id="signup">
     <h1>Sign Up for Free</h1>
-
     <form>
-
       <div class="top-row">
-        <div class="field-wrap">
-          <label :class="firstNameClass">
-            First Name
-            <span class="req">*</span>
-          </label>
-          <input
-            type="text"
-            required
-            autocomplete="off"
-            v-model="firstName"
-            @focus="toggle('firstName')"
-            @blur="toggle('firstName')"
-          />
-        </div>
-
-        <div class="field-wrap">
-          <label :class="lastNameClass">
-            Last Name
-            <span class="req">*</span>
-          </label>
-          <input
-            type="text"
-            required
-            autocomplete="off"
-            v-model="lastName"
-            @focus="toggle('lastName')"
-            @blur="toggle('lastName')"
-          />
-        </div>
-      </div>
-
-      <div class="field-wrap">
-        <label :class="emailClass">
-          Email Address
-          <span class="req">*</span>
-        </label>
-        <input
-          type="email"
-          required
-          autocomplete="off"
-          v-model="email"
-          @focus="toggle('email')"
-          @blur="toggle('email')"
+        <input-component
+          v-model="firstName"
+          :type="'text'"
+          :label="'First Name'"
+          :isRequired="true"
+        />
+        <input-component
+          v-model="lastName"
+          :type="'text'"
+          :label="'Last Name'"
+          :isRequired="true"
         />
       </div>
-
-      <div class="field-wrap">
-        <label :class="passwordClass">
-          Set A Password
-          <span class="req">*</span>
-        </label>
-        <input
-          type="password"
-          required
-          autocomplete="off"
-          v-model="password"
-          @focus="toggle('password')"
-          @blur="toggle('password')"
-        />
-      </div>
-
+      <input-component
+        v-model="email"
+        :type="'email'"
+        :label="'Email Address'"
+        :isRequired="true"
+      />
+      <input-component
+        v-model="password"
+        :type="'password'"
+        :label="'Set a password'"
+        :isRequired="true"
+      />
       <button @click="signUp" class="button button-block">Get Started</button>
-
     </form>
-
   </div>
 </template>
 <script lang="ts" src="./Signup.ts"></script>
